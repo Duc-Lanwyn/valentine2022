@@ -7,10 +7,35 @@
     --space-cadet-purple: #0A1128;
     --russian-purple: #2A0C4E;
     font-family: 'IM Fell French Canon SC', serif;
+    --font-color: #FFFCF7;
 }
 
 body {
     margin: 0px;
     padding: 0px;
+    color: #FFFCF7;
 }
 
+
+.pic1 {
+    background-image: url('assets/pic1.jpg') !important;
+}
+.pic2 {
+    background-image: url('assets/pic2.jpg') !important;
+}
+.pic3 {
+    background-image: url('assets/pic3.png') !important;
+}
+.pic4 {
+    background-image: url('assets/pic4.png') !important;
+}
+.pic5 {
+    background-image: url('assets/pic5.jpg') !important;
+}
+.pic6 {
+    background-image: url('assets/pic6.jpg') !important;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

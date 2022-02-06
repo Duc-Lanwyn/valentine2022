@@ -9,20 +9,13 @@
     flex-direction: column;
     font-size: 40px;
     font-weight: normal !important;
+    overflow: auto;
+    align-items: center;
 }
 
-.c1 {
-    color: #FFFCF7;
-}
-
-.c2 {
-    color: #EFBC06;
-}
-
-.c3 {
-    color: #E0D68A;
-}
-
-.c4 {
-    color: #621B00;
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
