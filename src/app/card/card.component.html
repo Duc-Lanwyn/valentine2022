@@ -6,7 +6,15 @@
         <span></span>
         <span></span>
         <div class="content" (click)="toggleMode()">
-            <p *ngIf="mode === 'hint' && !solved">{{hint}}</p>
+            <div *ngIf="mode === 'hint' && !solved" class="hint">
+              <p *ngIf="hint">
+                {{hint}}
+              </p>
+              <ng-container *ngIf="videoHint" >
+                <button *ngIf="!showVideoHint"  mat-raised-button color="primary" (click)="$event.stopPropagation(); showVideoHint=true" class="hint-button">Video Hint</button>
+                <video *ngIf="showVideoHint" class="video" controls autoplay (click)="$event.stopPropagation()"><source src="{{videoHint}}" type="video/mp4" ></video>
+              </ng-container>
+            </div>
             <div *ngIf="mode === 'solution' && !solved">
               <input type="text" class="solution-input" (click)="onSolutionInputClick($event)" maxlength="1" (change)="onSolutionInput($any($event))">
             </div>

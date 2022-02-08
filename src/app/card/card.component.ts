@@ -22,8 +22,12 @@ export class CardComponent implements OnInit {
   @Input()
   hint: string = "";
 
+  @Input()
+  videoHint: string = "";
+
   @Output() onSolved = new EventEmitter<boolean>();
   
+  showVideoHint: boolean = false;
 
   ngOnInit(): void {
   }

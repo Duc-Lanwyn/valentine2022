@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatCardModule} from '@angular/material/card'; 
 import {MatDividerModule} from '@angular/material/divider'; 
+import {MatButtonModule} from '@angular/material/button'; 
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {MatDividerModule} from '@angular/material/divider';
     BrowserModule,
     BrowserAnimationsModule,
     MatCardModule,
+    MatButtonModule,
     MatDividerModule
   ],
   providers: [],

@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     {
       secretKey: "E",
       backgroundClass: "pic2",
-      hint: "Bring me my red bag with my makeuppee!!!"
+      videoHint: "assets/makeupbag.mp4"
     },
     {
       secretKey: "I",
@@ -39,7 +39,8 @@ export class AppComponent implements OnInit {
     {
       secretKey: "O",
       backgroundClass: "pic6",
-      hint: "Nina Inhalaator (pic)"
+      //hint: "Nina Inhalaator (pic)",
+      videoHint: "assets/ninaInhalaator.mp4"
     },
     {
       secretKey: "R",
