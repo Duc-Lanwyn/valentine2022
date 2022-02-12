@@ -1,8 +1,8 @@
 <h1>Valentine's Day 2022</h1>
 
 <div class="cards-container">
-    <div *ngFor="let config of polkovodets_rumyantsev">
-        <app-card *animate="'1000ms ease-in-out';" class="card"  [secretKey]="config.secretKey" [hint]="config.hint" [videoHint]="config.videoHint" [customBackgroundClass]="config.backgroundClass" (onSolved)="onCardSolved(config)"></app-card>
+    <div *ngFor="let config of polkovodets_rumyantsev" >
+        <app-card *animate="'1000ms ease-in-out';" [ngClass]="{'solved': solved}" class="card"  [secretKey]="config.secretKey" [hint]="config.hint" [videoHint]="config.videoHint" [customBackgroundClass]="config.backgroundClass" (onSolved)="onCardSolved(config)"></app-card>
     </div>
 </div>
 
