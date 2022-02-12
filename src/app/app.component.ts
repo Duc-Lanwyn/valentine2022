@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren} from '@angular/core';
+import { AnimateDirective } from './directives';
 
 @Component({
   selector: 'app-root',
@@ -8,51 +9,79 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'valentine-2022';
 
-  polkovodets_rumyantsev_key = "DEILAOR".split('');
+  @ViewChildren(AnimateDirective) items?:QueryList<AnimateDirective>
 
   polkovodets_rumyantsev: any[] = [
     {
       secretKey: "D",
       backgroundClass: "pic1",
-      hint: "Many a fascists have been trampled under this war machine"
+      hint: "Many a fascists have been trampled under this war machine",
+      order: 5
     },
     {
       secretKey: "E",
       backgroundClass: "pic2",
-      videoHint: "assets/makeupbag.mp4"
+      videoHint: "assets/makeupbag.mp4",
+      order: 3
     },
     {
       secretKey: "I",
       backgroundClass: "pic3",
-      hint: "Kuhu ma lähen esimesena iga päev kui arkan (ei, mitte vannituba)"
+      hint: "Kuhu ma lähen esimesena iga päev kui arkan (ei, mitte vannituba)",
+      order: 4
     },
     {
       secretKey: "L",
       backgroundClass: "pic4",
-      hint: "Last letter of the middle word under two gray flags"
+      hint: "Last letter of the middle word under two gray flags",
+      order: 0
     },
     {
       secretKey: "A",
       backgroundClass: "pic5",
-      hint: "Raamat"
+      hint: "Raamat",
+      order: 6
     },
     {
       secretKey: "O",
       backgroundClass: "pic6",
       //hint: "Nina Inhalaator (pic)",
-      videoHint: "assets/ninaInhalaator.mp4"
+      videoHint: "assets/ninaInhalaator.mp4",
+      order: 1
     },
     {
       secretKey: "R",
       backgroundClass: "",
-      hint: "Ask a fortune telling paper"
+      hint: "Ask a fortune telling paper",
+      order: 2
     }
   ];
+
+  solved: boolean = false;
 
   ngOnInit() {
   }
 
+  espressoPetroleum() {
+    this.polkovodets_rumyantsev = this.polkovodets_rumyantsev.sort((a,b)=>a.order-b.order).map(x=>x);
+
+    
+    (this.items as QueryList<AnimateDirective>).forEach((item:AnimateDirective)=>item.animateGo())
+  }
+
   onCardSolved( config: any) {
     config.solved = true;
+
+    if ( this.isAllSolved() ) {
+      console.log("ALL SOLVED!")
+      this.solved = true;
+      this.espressoPetroleum();
+    }
+  }
+
+  isAllSolved() {
+    return this.polkovodets_rumyantsev.every( (config: any) => {
+      return config.solved;
+    } );
   }
 }

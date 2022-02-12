@@ -16,7 +16,7 @@
               </ng-container>
             </div>
             <div *ngIf="mode === 'solution' && !solved">
-              <input type="text" class="solution-input" (click)="onSolutionInputClick($event)" maxlength="1" (change)="onSolutionInput($any($event))">
+              <input tabindex="0" autoFocus  type="text" class="solution-input" (click)="onSolutionInputClick($event)" maxlength="1" (change)="onSolutionInput($any($event))">
             </div>
             <h4 *ngIf="solved" class="solution-display">{{secretKey}}</h4>
         </div>

@@ -1,5 +1,10 @@
 <h1>Valentine's Day 2022</h1>
 
 <div class="cards-container">
-    <app-card class="card" *ngFor="let config of polkovodets_rumyantsev" [secretKey]="config.secretKey" [hint]="config.hint" [videoHint]="config.videoHint" [customBackgroundClass]="config.backgroundClass" (onSolved)="onCardSolved(config)"></app-card>
+    <div *ngFor="let config of polkovodets_rumyantsev">
+        <app-card *animate="'1000ms ease-in-out';" class="card"  [secretKey]="config.secretKey" [hint]="config.hint" [videoHint]="config.videoHint" [customBackgroundClass]="config.backgroundClass" (onSolved)="onCardSolved(config)"></app-card>
+    </div>
 </div>
+
+
+<!-- https://stackblitz.com/edit/angular-7pbpa2?file=src%2Fapp%2Fapp.component.html -->

@@ -9,10 +9,30 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatButtonModule} from '@angular/material/button'; 
 
+import { Directive, ElementRef, OnInit } from "@angular/core";
+import { AnimateDirective } from './directives';
+
+@Directive({
+  selector: "[autoFocus]"
+})
+export class AutoFocusDirective implements OnInit {
+  private inputElement: HTMLElement;
+
+  constructor(private elementRef: ElementRef) {
+    this.inputElement = this.elementRef.nativeElement;
+  }
+
+  ngOnInit(): void {
+    this.inputElement.focus();
+  }
+}
+
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    AutoFocusDirective,
+    AnimateDirective
   ],
   imports: [
     BrowserModule,
