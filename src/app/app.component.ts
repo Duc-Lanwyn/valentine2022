@@ -60,14 +60,19 @@ export class AppComponent implements OnInit {
 
   solved: boolean = false;
 
+  showSolution: boolean = false;
+
   ngOnInit() {
   }
 
   espressoPetroleum() {
     this.polkovodets_rumyantsev = this.polkovodets_rumyantsev.sort((a,b)=>a.order-b.order).map(x=>x);
 
-    
     (this.items as QueryList<AnimateDirective>).forEach((item:AnimateDirective)=>item.animateGo())
+
+    setTimeout( () => {
+      this.showSolution = true;
+    }, 2000);
   }
 
   onCardSolved( config: any) {
