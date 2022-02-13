@@ -25,6 +25,9 @@ export class CardComponent implements OnInit {
   @Input()
   videoHint: string = "";
 
+  @Input()
+  pictureHint: string = "";
+
   @Output() onSolved = new EventEmitter<boolean>();
   
   showVideoHint: boolean = false;

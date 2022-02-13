@@ -39,7 +39,8 @@ export class AppComponent implements OnInit {
     {
       secretKey: "A",
       backgroundClass: "pic5",
-      hint: "Raamat",
+      hint: "Il tuo viaggio verso il libro segreto inizia a Milano",
+      pictureHint: "assets/milan.png",
       order: 6
     },
     {

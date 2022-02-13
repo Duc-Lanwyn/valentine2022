@@ -2,7 +2,7 @@
 
 <div class="cards-container">
     <div *ngFor="let config of polkovodets_rumyantsev" >
-        <app-card *animate="'1000ms ease-in-out';" [ngClass]="{'solved': solved}" class="card"  [secretKey]="config.secretKey" [hint]="config.hint" [videoHint]="config.videoHint" [customBackgroundClass]="config.backgroundClass" (onSolved)="onCardSolved(config)"></app-card>
+        <app-card *animate="'1000ms ease-in-out';" [ngClass]="{'solved': solved}" class="card"  [secretKey]="config.secretKey" [hint]="config.hint" [pictureHint]="config.pictureHint" [videoHint]="config.videoHint" [customBackgroundClass]="config.backgroundClass" (onSolved)="onCardSolved(config)"></app-card>
     </div>
 </div>
 
