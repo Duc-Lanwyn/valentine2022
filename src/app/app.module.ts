@@ -45,3 +45,12 @@ export class AutoFocusDirective implements OnInit {
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+// gh-pages deployment:
+
+/**
+ * ng build --prod --base-href "https://duc-lanwyn.github.io/valentine2022/"
+ * 
+ * npx angular-cli-ghpages --dir="dist/valentine-2022"
+ */
