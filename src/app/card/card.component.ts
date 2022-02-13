@@ -33,10 +33,10 @@ export class CardComponent implements OnInit {
   showVideoHint: boolean = false;
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.solved = true;
-      this.onSolved.emit(true);
-    }, 1000)
+    // setTimeout(() => {
+    //   this.solved = true;
+    //   this.onSolved.emit(true);
+    // }, 1000)
   }
 
   toggleMode() {
